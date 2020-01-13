@@ -1,9 +1,11 @@
 package com.itp.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.Currency;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -68,6 +70,15 @@ public class AddProductServlet extends HttpServlet {
 			
 			if (isAdded==true) {
 				 System.out.println("Successfully");
+				 
+				 PrintWriter writer = response.getWriter();
+				 writer.println("<script>");
+				 writer.println("alert('Added Successfully')");
+				 writer.println("</script>");
+				 
+				 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+				 dispatcher.include(request, response);
+				 
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
