@@ -11,7 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-        <form action="AddProductServlet" mettod="post">
+        <form action="AddProductServlet" method="post">
         
         <input type="text" placeholder="Pro_Code" name="Pro_Code">
         <br>
@@ -52,6 +52,21 @@
         	<%ProductService serv = new ProductServiceImpl();
         	
         	ArrayList <Product> list = serv.getAllProducts();
+        	
+        	for (Product p : list) {
+        	
+        	%>
+        	<tr>
+        
+        <td><%= p.getPro_Code() %></td>
+        <td><%= p.getPro_Name() %></td>
+        <td><%= p.getPro_Descrip() %></td>
+        <td><%= p.getPro_Status() %></td>
+        <td><%= p.getPro_Price() %></td>
+        <td><%= p.getPro_Weight() %></td>
+        	</tr>
+        	<%
+        	}
         	
         	%>
        </table> 	
