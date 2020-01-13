@@ -1,68 +1,126 @@
 package com.itp.model;
 
-public class Product {
+import java.util.Currency;
 
-	private int productId;
-	private String productName;
-	private String productDescrip;
-	private float productPrice;
-	private String productStatus;
+public class Product {
+	
+	private String Pro_Id;
+	private String Pro_Code;
+	private String Pro_Name;
+	private String pro_Descrip;
+	private String pro_Status;
+	private String pro_Price;
+	private String pro_Weight;
+	
 	
 	public Product() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Product(int productId, String productName, String productDescrip, float productPrice, String productStatus) {
+	
+    
+	
+
+
+
+	/**
+	 * @param pro_Id
+	 * @param pro_Code
+	 * @param pro_Name
+	 * @param pro_Descrip
+	 * @param pro_Status
+	 * @param pro_Price
+	 * @param pro_Weight
+	 */
+	public Product(String pro_Id, String pro_Code, String pro_Name, String pro_Descrip, String pro_Status,
+			String pro_Price, String pro_Weight) {
 		super();
-		this.productId = productId;
-		this.productName = productName;
-		this.productDescrip = productDescrip;
-		this.productPrice = productPrice;
-		this.productStatus = productStatus;
+		Pro_Id = pro_Id;
+		Pro_Code = pro_Code;
+		Pro_Name = pro_Name;
+		this.pro_Descrip = pro_Descrip;
+		this.pro_Status = pro_Status;
+		this.pro_Price = pro_Price;
+		this.pro_Weight = pro_Weight;
 	}
 
-	public int getProductId() {
-		return productId;
+
+
+
+	public String getPro_Id() {
+		return Pro_Id;
 	}
 
-	public void setProductId(int productId) {
-		this.productId = productId;
+
+	public void setPro_Id(String pid) {
+		Pro_Id = pid;
 	}
 
-	public String getProductName() {
-		return productName;
+
+	public String getPro_Code() {
+		return Pro_Code;
 	}
 
-	public void setProductName(String productName) {
-		this.productName = productName;
+
+	public void setPro_Code(String pro_Code) {
+		Pro_Code = pro_Code;
 	}
 
-	public String getProductDescrip() {
-		return productDescrip;
+
+	public String getPro_Name() {
+		return Pro_Name;
 	}
 
-	public void setProductDescrip(String productDescrip) {
-		this.productDescrip = productDescrip;
+
+	public void setPro_Name(String pro_Name) {
+		Pro_Name = pro_Name;
 	}
 
-	public float getProductPrice() {
-		return productPrice;
+
+	public String getPro_Descrip() {
+		return pro_Descrip;
 	}
 
-	public void setProductPrice(float productPrice) {
-		this.productPrice = productPrice;
+
+	public void setPro_Descrip(String pro_Descrip) {
+		this.pro_Descrip = pro_Descrip;
 	}
 
-	public String getProductStatus() {
-		return productStatus;
+
+	public String getPro_Status() {
+		return pro_Status;
 	}
 
-	public void setProductStatus(String productStatus) {
-		this.productStatus = productStatus;
+
+	public void setPro_Status(String pro_Status) {
+		this.pro_Status = pro_Status;
+	}
+
+
+	public String getPro_Price() {
+		return pro_Price;
+	}
+
+
+	public void setPro_Price(String pprice) {
+		this.pro_Price = pprice;
+	}
+
+
+
+
+	public String getPro_Weight() {
+		return pro_Weight;
+	}
+
+
+
+	public void setPro_Weight(String pro_Weight) {
+		this.pro_Weight = pro_Weight;
 	}
 	
 	
 	
 	
-	
+
 }
