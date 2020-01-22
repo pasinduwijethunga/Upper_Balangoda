@@ -15,6 +15,10 @@ public interface ProductService {
 	
 	
 	public ArrayList <Product> getAllProducts()throws SQLException;
+
+
+
+	boolean deleteProduct(String Pro_Id)throws SQLException ;
 	
 	
 	

@@ -74,4 +74,14 @@ public class ProductServiceImpl  implements ProductService{
 		return proList;
 	}
 
+
+
+	@Override
+	public boolean deleteProduct(String Pro_Id) throws SQLException {
+		
+		String sql = "Delete from products where Pro_Id = '"+Pro_Id+"'";
+		java.sql.Statement stm = conn.createStatement();
+		return stm.executeUpdate(sql)>0;
+ 	}
+
 }
