@@ -64,6 +64,14 @@
         <td><%= p.getPro_Status() %></td>
         <td><%= p.getPro_Price() %></td>
         <td><%= p.getPro_Weight() %></td>
+        <td>
+        	<form action="DeleteProductServlet" method="post">
+        	<input type="hidden" name="deleteValue" value ="<%= p.getPro_Id() %>">
+        	<input type="Submit" name ="btnDelete"  value = "submit">
+        	</form>
+        
+        
+        
         	</tr>
         	<%
         	}
